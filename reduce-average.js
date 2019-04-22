@@ -8,3 +8,11 @@ const average = euros.reduce((total, amount, index, array) => {
   }
 });
 average // 39.37
+
+
+
+//segundo exemplo
+const average = euros.reduce((total, amount, index, array) => {
+  total += amount
+  return total/array.length
+}, 0);
