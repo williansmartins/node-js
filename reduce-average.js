@@ -16,3 +16,11 @@ const average = euros.reduce((total, amount, index, array) => {
   total += amount
   return total/array.length
 }, 0);
+
+
+const fruitBasket = ['banana', 'cherry', 'orange', 'apple', 'cherry', 'orange', 'apple', 'banana', 'cherry', 'orange', 'fig' ];
+const count = fruitBasket.reduce( (tally, fruit) => {
+  tally[fruit] = (tally[fruit] || 0) + 1 ;
+  return tally;
+} , {})
+count // { banana: 2, cherry: 3, orange: 3, apple: 2, fig: 1 }
